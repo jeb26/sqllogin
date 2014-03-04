@@ -31,6 +31,20 @@
 
  <p>&nbsp;</p> <!-- Creates small gap between login forms-->
 
+<script type="text/javascript">
+$(document).ready(function () {
+    $.ajax({ 
+        type: 'GET', 
+        url: 'http://example/functions.php', 
+        data: { get_param: 'value' }, 
+        success: function (data) { 
+            var names = data
+            $('#cand').html(data);
+        }
+    });
+});
+</script>
+
 <!--
 <div class="login"> 
   <h1>NJIT SQL Login</h1>
